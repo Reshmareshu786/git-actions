@@ -24,13 +24,13 @@ Run the pytest command to execute the tests in addition.py.
 Example Workflow File
 Here’s a quick look at the workflow.yml file:
 
-name: My First GitHub Actions
 
-on: [push]
 
-jobs:
-  build:
-    runs-on: self-hosted
+    name: My First GitHub Actions
+    on: [push]
+    jobs:
+      build:
+      runs-on: self-hosted
 
     strategy:
       matrix:
@@ -52,6 +52,7 @@ jobs:
       run: |
         cd src
         python -m pytest addition.py
+
 
 How to Add More Tests ?
 1.Create Python test files in the src directory.
